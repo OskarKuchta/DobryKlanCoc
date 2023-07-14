@@ -6,6 +6,7 @@
 
 html {
   scroll-behavior: smooth;
+  color: var(--white);
 }
 * {
   margin: 0;
@@ -13,7 +14,10 @@ html {
   box-sizing: border-box;
 }
 body {
-  background-color: white;
+  background: url(./assets/background.png);
+  background-size: cover;
+  background-attachment: fixed;
+  -webkit-tap-highlight-color: transparent;
 }
 .navbar {
   height: auto;
@@ -40,9 +44,10 @@ body {
   font-family: var(--font);
   font-weight: 500;
   color: var(--white);
+  font-size: 1rem;
 }
 
-.hamburger-menu {
+.navbar__right--hamburger-menu {
   position: relative;
   cursor: pointer;
   z-index: 20;
@@ -50,7 +55,7 @@ body {
   max-height: 70px;
   padding: 0.5rem;
 }
-.hamburger-container {
+.navbar__right--hamburger-container {
   position: absolute;
   top: 1.5rem;
   right: 2rem;
@@ -89,7 +94,11 @@ body {
 .third {
   transform: rotate(-45deg) translateY(-6px) translateX(3px);
 }
-
+.first-line:hover,
+.second-line:hover,
+.third-line:hover {
+  background-color: red;
+}
 .lists {
   display: none;
   align-items: center;
@@ -106,14 +115,14 @@ body {
   display: flex;
   flex-direction: column;
 }
-.nav-element {
+.navbar__right--element {
   display: flex;
   width: 100vw;
   min-height: 4rem;
   flex: 1;
   text-decoration: none;
 }
-.nav-element a {
+.navbar__right--element a {
   display: flex;
   width: 100%;
   justify-content: center;
@@ -122,17 +131,30 @@ body {
   text-decoration: none;
   color: rgb(239, 230, 230);
 }
-.nav-element a:hover {
+.navbar__right--element a:hover {
   color: cyan;
   background-color: rgb(60, 54, 54);
   transition: 0.8s background-color ease-in-out, 0.5s color ease-in-out;
 }
-
+.about {
+  margin: 2rem 5%;
+  height: 3000px;
+}
 @media screen and (min-width: 768px) {
   .navbar__left--photo {
     width: 3rem;
   }
   .navbar__left--name {
+    font-size: 1.3rem;
     margin-left: 2rem;
+  }
+}
+.about {
+  margin: 5rem 5%;
+}
+@media screen and (max-width: 768px) {
+  .navbar {
+    position: sticky;
+    top: 0;
   }
 }
