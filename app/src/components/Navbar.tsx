@@ -38,10 +38,10 @@ const Navbar: React.FC = () => {
             <a href="#home">HOME</a>
           </li>
           <li className="navbar__right--element hover">
-            <a href="#about">ABOUT</a>
+            <a href="#about">STATS</a>
           </li>
           <li className="navbar__right--element hover">
-            <a href="#stats">STATS</a>
+            <a href="#stats">CONTACT</a>
           </li>
         </ul>
         <div className="navbar__right--hamburger-container">

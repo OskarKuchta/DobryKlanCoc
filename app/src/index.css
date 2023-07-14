@@ -138,7 +138,6 @@ body {
 }
 .about {
   margin: 2rem 5%;
-  height: 3000px;
 }
 @media screen and (min-width: 768px) {
   .navbar__left--photo {
@@ -151,10 +150,17 @@ body {
 }
 .about {
   margin: 5rem 5%;
+  display: flex;
 }
 @media screen and (max-width: 768px) {
   .navbar {
     position: sticky;
     top: 0;
+  }
+  .about {
+    flex-direction: column-reverse;
+  }
+  .about h1 {
+    font-size: 1.3rem;
   }
 }
