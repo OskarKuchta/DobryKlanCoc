@@ -1,7 +1,8 @@
 :root {
   --font: "GFS Didot", serif;
-  --white: rgb(235, 218, 218);
+  --white: rgb(255, 255, 255);
   --gray: rgb(235, 218, 218, 0.5);
+  --black: rgb(0, 0, 0);
 }
 
 html {
@@ -43,7 +44,7 @@ body {
   margin-left: 1rem;
   font-family: var(--font);
   font-weight: 500;
-  color: var(--white);
+  color: rgb(235, 218, 218);
   font-size: 1rem;
 }
 
@@ -138,6 +139,9 @@ body {
 }
 .about {
   margin: 2rem 5%;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
 }
 @media screen and (min-width: 768px) {
   .navbar__left--photo {
@@ -147,10 +151,9 @@ body {
     font-size: 1.3rem;
     margin-left: 2rem;
   }
-}
-.about {
-  margin: 5rem 5%;
-  display: flex;
+  .about {
+    margin: 5rem 10%;
+  }
 }
 @media screen and (max-width: 768px) {
   .navbar {
@@ -160,7 +163,10 @@ body {
   .about {
     flex-direction: column-reverse;
   }
-  .about h1 {
+  .about__left--header {
     font-size: 1.3rem;
+  }
+  .about__right {
+    margin-bottom: 2rem;
   }
 }
