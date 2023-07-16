@@ -5,13 +5,13 @@ import { ErrorBoundary } from "./Hooks/useFetch";
 import Stats from "./components/Stats";
 const App: React.FC = () => {
   return (
-    <>
-      <Navbar />
-      <ErrorBoundary>
-        <About />
-      </ErrorBoundary>
-      <Stats />
-    </>
+      <div className="bg-wrapper">
+        <Navbar />
+        <ErrorBoundary>
+          <About />
+        </ErrorBoundary>
+        <Stats />
+      </div>
   );
 };
 
