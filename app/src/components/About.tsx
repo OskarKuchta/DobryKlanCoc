@@ -9,6 +9,9 @@ const About: React.FC = () => {
     <div>Error</div>;
   }
   if (data) {
+    const copyTag = () => {
+      navigator.clipboard.writeText(data.tag);
+    };
     console.log(data);
     return (
       <div id="home" className="about">
@@ -24,7 +27,14 @@ const About: React.FC = () => {
         <div className="about__right">
           <img src={data.badgeUrls.medium} alt="logo Dobry Klan" />
           <h2 className="about__right--clanName">Dobry Klan</h2>
-          <h3 className="about__right--clanTag">{data.tag}</h3>
+          <div className="about__right--clan">
+            <h3 className="about__right--clan-tag" onClick={copyTag}>
+              {data.tag}
+            </h3>
+            <p className="about__right--clan-popup">
+              Text skopiowany do schowka.
+            </p>
+          </div>
         </div>
       </div>
     );
