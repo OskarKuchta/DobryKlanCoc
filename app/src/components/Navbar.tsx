@@ -25,13 +25,13 @@ const Navbar: React.FC = () => {
     setShowMenu(!showMenu);
     setIsClicked(!isClicked);
   };
-  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, a: number) => {
     e.preventDefault();
     const targetId: string | null = e.currentTarget.getAttribute("href");
     if (targetId) {
       const targetElement = document.querySelector(targetId) as HTMLElement;
       if (targetElement) {
-        const targetPosition = targetElement.offsetTop - 300;
+        const targetPosition = targetElement.offsetTop - a;
         window.scrollTo({
           top: targetPosition,
           behavior: "smooth",
@@ -42,21 +42,30 @@ const Navbar: React.FC = () => {
   return (
     <nav className="navbar">
       <div className="navbar__left">
-        <img className="navbar__left--photo" src={logo} alt="logo Dobry Klan" onClick={() => location.reload()}/>
+        <img
+          className="navbar__left--photo"
+          src={logo}
+          alt="logo Dobry Klan"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        />
         <span className="navbar__left--name">DOBRY KLAN</span>
       </div>
       <div className="navbar__right">
         <ul className={`lists ${showMenu ? "show" : ""}`}>
           <li className="navbar__right--element hover">
-            <a href="#home" onClick={handleScroll}>
+            <a href="#home" onClick={(e) => handleScroll(e, 300)}>
               HOME
             </a>
           </li>
           <li className="navbar__right--element hover">
-            <a href="#about">STATS</a>
+            <a href="#stats" onClick={(e) => handleScroll(e, 200)}>
+              STATS
+            </a>
           </li>
           <li className="navbar__right--element hover">
-            <a href="#stats">CONTACT</a>
+            <a href="#contact" onClick={(e) => handleScroll(e, 200)}>
+              CONTACT
+            </a>
           </li>
         </ul>
         <div className="navbar__right--hamburger-container">

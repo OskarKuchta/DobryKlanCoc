@@ -4,9 +4,9 @@
   --gray: rgb(235, 218, 218, 0.5);
   --black: rgb(0, 0, 0);
 }
-
 html {
   color: var(--white);
+  behavior: smooth;
 }
 * {
   margin: 0;
@@ -36,6 +36,9 @@ body {
   border-bottom: 1px solid var(--gray);
   display: flex;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(5px);
 }
 .navbar__left {
   display: flex;
@@ -155,7 +158,11 @@ body {
 .about__right--clanTag {
   font-size: 1.6rem;
 }
-@media screen and (min-width: 768px) {
+.stats,
+.contact {
+  height: 1000px;
+}
+@media screen and (min-width: 769px) {
   .navbar__left--photo {
     width: 3rem;
   }
@@ -171,6 +178,7 @@ body {
   }
   .about h1 {
     font-size: 1.5rem;
+    padding-top: 0.5rem;
   }
   .about__right--clanName,
   .about__right--clanTag {
@@ -183,10 +191,6 @@ body {
   }
 }
 @media screen and (max-width: 768px) {
-  .navbar {
-    position: sticky;
-    top: 0;
-  }
   .about {
     flex-direction: column-reverse;
     text-align: center;
