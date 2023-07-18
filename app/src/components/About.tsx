@@ -1,17 +1,38 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import useFetch from "../Hooks/useFetch";
 const About: React.FC = () => {
   const { data, loading, error } = useFetch();
+  const popupRef = useRef<HTMLParagraphElement>(null);
+  const [popup, setPopup] = useState<boolean>(true);
+  const Refpopup = popupRef.current;
   if (loading) {
-    <div>Loading...</div>;
+    return <div>Loading...</div>;
   }
   if (error) {
-    <div>Error</div>;
+    return <div>Error</div>;
   }
   if (data) {
     const copyTag = () => {
       navigator.clipboard.writeText(data.tag);
+      setPopup(true);
+      if (popup && Refpopup) {
+        Refpopup.style.display = "block";
+        let i = 9;
+        const fadeOut = () => {
+           if (i >= 0) {
+            Refpopup.style.opacity = `0.${i}`;
+            console.log(i);
+            i--;
+            setTimeout(fadeOut, 200);
+          }
+        };
+        fadeOut();
+        setTimeout(() => {
+          Refpopup.style.display = "none";
+        }, 2000);
+      }
     };
+
     console.log(data);
     return (
       <div id="home" className="about">
@@ -28,11 +49,11 @@ const About: React.FC = () => {
           <img src={data.badgeUrls.medium} alt="logo Dobry Klan" />
           <h2 className="about__right--clanName">Dobry Klan</h2>
           <div className="about__right--clan">
-            <h3 className="about__right--clan-tag" onClick={copyTag}>
+            <p className="about__right--clan-tag" onClick={copyTag}>
               {data.tag}
-            </h3>
-            <p className="about__right--clan-popup">
-              Text skopiowany do schowka.
+            </p>
+            <p className="about__right--clan-popup" ref={popupRef}>
+              Tekst skopiowany do schowka.
             </p>
           </div>
         </div>

@@ -176,8 +176,15 @@ body {
   font-size: 1.6rem;
 }
 
-.about__right--clan {
-  position: relative;
+.about__right--clan-popup {
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+  color: black;
+  background-color: white;
+  width: 70%;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.2rem;
 }
 
 .stats {
