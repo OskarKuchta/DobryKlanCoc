@@ -4,6 +4,7 @@ const About: React.FC = () => {
   const { data, loading, error } = useFetch();
   const popupRef = useRef<HTMLParagraphElement>(null);
   const [popup, setPopup] = useState<boolean>(true);
+  const [isBlocked, setIsBlocked] = useState<boolean>(false);
   const Refpopup = popupRef.current;
   if (loading) {
     return <div>Loading...</div>;
@@ -13,23 +14,30 @@ const About: React.FC = () => {
   }
   if (data) {
     const copyTag = () => {
+      if (isBlocked) {
+        return;
+      }
+      setIsBlocked(true);
       navigator.clipboard.writeText(data.tag);
       setPopup(true);
       if (popup && Refpopup) {
         Refpopup.style.display = "block";
         let i = 9;
         const fadeOut = () => {
-           if (i >= 0) {
+          if (i >= 0) {
             Refpopup.style.opacity = `0.${i}`;
-            console.log(i);
             i--;
             setTimeout(fadeOut, 200);
           }
         };
         fadeOut();
-        setTimeout(() => {
+        const hide = setTimeout(() => {
           Refpopup.style.display = "none";
+          setIsBlocked(false);
         }, 2000);
+        if (Refpopup.style.display === "none") {
+          clearTimeout(hide);
+        }
       }
     };
 
@@ -39,10 +47,11 @@ const About: React.FC = () => {
         <div className="about__left">
           <h1 className="about__left--header">
             Witamy na stronie klanu Dobry Klan. Jesteśmy zgraną ekipą, która gra
-            ze sobą od lat w przyjaznej atmosferze. Jeżeli posiadasz th14+
-            zapraszamy w nasze skromne progi. Aktualnie znajdujemy się w{" "}
-            {data.warLeague.name} i posiadamy blians wojen {data.warWins} W /{" "}
-            {data.warTies} T / {data.warLosses} L.
+            ze sobą od lat w przyjaznej atmosferze, która liczy aktualnie{" "}
+            {data.members} osób. Jeżeli posiadasz TH14+ zapraszamy w nasze
+            skromne progi. Aktualnie znajdujemy się w {data.warLeague.name} i
+            posiadamy blians wojen {data.warWins} W / {data.warTies} T /{" "}
+            {data.warLosses} L.
           </h1>
         </div>
         <div className="about__right">
