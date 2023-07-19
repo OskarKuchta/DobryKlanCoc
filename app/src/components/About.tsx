@@ -1,17 +1,11 @@
 import React, { useRef, useState } from "react";
 import useFetch from "../Hooks/useFetch";
 const About: React.FC = () => {
-  const { data, loading, error } = useFetch();
+  const { data } = useFetch();
   const popupRef = useRef<HTMLParagraphElement>(null);
   const [popup, setPopup] = useState<boolean>(true);
   const [isBlocked, setIsBlocked] = useState<boolean>(false);
   const Refpopup = popupRef.current;
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-  if (error) {
-    return <div>Error</div>;
-  }
   if (data) {
     const copyTag = () => {
       if (isBlocked) {
