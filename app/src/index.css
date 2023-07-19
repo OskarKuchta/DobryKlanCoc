@@ -16,6 +16,11 @@ html {
 body {
   -webkit-tap-highlight-color: transparent;
 }
+.about,
+.stats {
+  margin: 2rem 5%;
+  text-align: center;
+}
 .bg-fixed {
   background-image: url(./assets/background.png);
   background-repeat: no-repeat;
@@ -163,17 +168,11 @@ body {
   background-color: rgb(60, 54, 54);
   transition: 0.8s background-color ease-in-out, 0.5s color ease-in-out;
 }
-.about,
-.stats {
-  margin: 2rem 5%;
-}
 .about {
   display: flex;
   justify-content: space-between;
 }
-.about__right {
-  text-align: center;
-}
+
 .about__right--clanName,
 .about__right--clan-tag {
   font-size: 1.6rem;
@@ -190,22 +189,30 @@ body {
   width: 70%;
   padding: 0.4rem 0.8rem;
   border-radius: 0.2rem;
+  border: transparent;
 }
-
-.stats {
-  height: 1000px;
+.stats__top {
+  display: flex;
+}
+.stats__top button {
+  padding: 0.4rem 4rem;
+  outline: transparent;
+}
+.stats__top button:hover,
+.stats__top button:focus {
+  transform: scale(110%);
 }
 @media screen and (min-width: 769px) {
+  .about,
+  .stats {
+    margin: 5rem 10%;
+  }
   .navbar__left--photo {
     width: 3rem;
   }
   .navbar__left--name {
     font-size: 1.3rem;
     margin-left: 2rem;
-  }
-  .about,
-  .stats {
-    margin: 5rem 10%;
   }
   .about__right {
     margin-left: 20%;
@@ -219,9 +226,6 @@ body {
     font-size: 2rem;
   }
 }
-.stats__top {
-  display: flex;
-}
 .stats__top button {
   margin-left: 3rem;
 }
@@ -233,7 +237,6 @@ body {
 @media screen and (max-width: 768px) {
   .about {
     flex-direction: column-reverse;
-    text-align: center;
   }
   .about__left--header {
     font-size: 1.3rem;
@@ -243,5 +246,14 @@ body {
   }
   .about__right--clan-popup {
     margin-top: 1rem;
+  }
+  .stats__top {
+    display: flex;
+    flex-direction: column;
+  }
+  .stats__top button {
+    padding: 0.4rem 5rem;
+    width: 50%;
+    margin: 2rem auto;
   }
 }
