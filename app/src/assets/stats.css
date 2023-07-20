@@ -1,0 +1,45 @@
+.stats__top {
+  display: flex;
+}
+.stats__top button {
+  padding: 0.4rem 4rem;
+  display: flex;
+  justify-content: center;
+  outline: transparent;
+}
+.stats__top button:hover,
+.stats__top button:active {
+  transform: scale(105%);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+.stats__members table {
+  margin-top: 4rem;
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+}
+
+.stats__members thead th,
+.stats__members tbody td {
+  border: 2px solid black;
+  padding: 0.5rem 0;
+}
+@media screen and (min-width: 769px) {
+  .stats__top button {
+    margin-left: 3rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .stats__members table {
+    margin-top: 2rem;
+  }
+  .stats__top {
+    display: flex;
+    flex-direction: column;
+  }
+  .stats__top button {
+    padding: 0.4rem 6rem;
+    width: 5rem;
+    margin: 2rem auto;
+  }
+}

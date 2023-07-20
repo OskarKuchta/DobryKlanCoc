@@ -1,5 +1,6 @@
 @import "./assets/navbar.css";
 @import "./assets/about.css";
+@import "./assets/stats.css";
 :root {
   --font: "GFS Didot", serif;
   --white: rgb(255, 255, 255);
@@ -56,38 +57,12 @@ body {
   color: rgba(0, 0, 0, 0);
 }
 
-.stats__top {
-  display: flex;
-}
-.stats__top button {
-  padding: 0.4rem 4rem;
-  display: flex;
-  justify-content: center;
-  outline: transparent;
-}
-.stats__top button:hover,
-.stats__top button:active {
-  transform: scale(105%);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
-}
+
 @media screen and (min-width: 769px) {
   .about,
   .stats {
     margin: 5rem 10%;
   }
 }
-.stats__top button {
-  margin-left: 3rem;
-}
 
-@media screen and (max-width: 768px) {
-  .stats__top {
-    display: flex;
-    flex-direction: column;
-  }
-  .stats__top button {
-    padding: 0.4rem 6rem;
-    width: 5rem;
-    margin: 2rem auto;
-  }
-}
+
