@@ -25,7 +25,24 @@ const Stats: React.FC = () => {
       if (filterLoop === 0) {
         return a.name.localeCompare(b.name);
       } else if (filterLoop === 1) {
-        
+        const roles = ["leader", "coLeader", "admin", "member"];
+        const roleOrder: { [key: string]: number } = {
+          member: 3,
+          admin: 2,
+          coLeader: 1,
+          leader: 0,
+        };
+
+        // If both roles are present in roleOrder, compare them based on their order
+        if (
+          roleOrder[a.role] !== undefined &&
+          roleOrder[b.role] !== undefined
+        ) {
+          return roleOrder[a.role] - roleOrder[b.role];
+        }
+
+        // If one of the roles is not present in roleOrder, sort them alphabetically by role name
+        return a.role.localeCompare(b.role);
       } else if (filterLoop === 2) {
         return b.expLevel - a.expLevel;
       } else if (filterLoop === 3) {
