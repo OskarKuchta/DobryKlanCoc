@@ -1,5 +1,6 @@
 .stats__top {
   display: flex;
+  justify-content: space-between;
 }
 .stats__top button {
   padding: 0.4rem 4rem;
@@ -10,7 +11,7 @@
 .stats__top button:hover,
 .stats__top button:active {
   transform: scale(105%);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 14px rgba(224, 15, 15, 0.3);
 }
 .stats__members table {
   margin-top: 4rem;
@@ -25,8 +26,17 @@
   padding: 0.5rem 0;
 }
 @media screen and (min-width: 769px) {
-  .stats__top button {
+  .stats__top--left {
+    display: flex;
+  }
+  .stats__top--arrow {
+    margin: 0.5rem 1rem;
+  }
+  .stats__top--left button {
     margin-left: 3rem;
+  }
+  .stats__bottom {
+    text-align: initial;
   }
 }
 @media screen and (max-width: 768px) {

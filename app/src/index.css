@@ -9,7 +9,7 @@
 }
 html {
   color: var(--white);
-  behavior: smooth;
+  scroll-behavior: smooth;
 }
 * {
   margin: 0;
@@ -20,7 +20,8 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 .about,
-.stats {
+.stats,
+.stats__bottom {
   margin: 2rem 5%;
   text-align: center;
 }
@@ -57,12 +58,10 @@ body {
   color: rgba(0, 0, 0, 0);
 }
 
-
 @media screen and (min-width: 769px) {
   .about,
-  .stats {
+  .stats,
+  .stats__bottom {
     margin: 5rem 10%;
   }
 }
-
-

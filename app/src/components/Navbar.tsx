@@ -58,7 +58,7 @@ const Navbar: React.FC = () => {
             </a>
           </li>
           <li className="navbar__right--element hover">
-            <a href="#stats" onClick={(e) => handleScroll(e, 200)}>
+            <a href="#stats" onClick={(e) => handleScroll(e, 120)}>
               STATS
             </a>
           </li>

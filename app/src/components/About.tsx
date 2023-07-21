@@ -43,9 +43,7 @@ const About: React.FC = () => {
             Witamy na stronie klanu Dobry Klan. Jesteśmy zgraną ekipą, która gra
             ze sobą od lat w przyjaznej atmosferze, która liczy aktualnie{" "}
             {data.members} osób. Jeżeli posiadasz TH14+ zapraszamy w nasze
-            skromne progi. Aktualnie znajdujemy się w {data.warLeague.name} i
-            posiadamy blians wojen {data.warWins} W / {data.warTies} T /{" "}
-            {data.warLosses} L.
+            skromne progi.
           </h1>
         </div>
         <div className="about__right">
