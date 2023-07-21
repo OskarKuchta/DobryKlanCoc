@@ -1,6 +1,7 @@
 @import "./assets/navbar.css";
 @import "./assets/about.css";
 @import "./assets/stats.css";
+@import "./assets/contact.css";
 :root {
   --font: "GFS Didot", serif;
   --white: rgb(255, 255, 255);
@@ -21,7 +22,8 @@ body {
 }
 .about,
 .stats,
-.stats__bottom {
+.stats__top,
+.contact {
   margin: 2rem 5%;
   text-align: center;
 }
@@ -35,7 +37,7 @@ body {
   width: 100%;
   height: 100vh;
   z-index: -1;
-  filter: brightness(80%);
+  filter: brightness(70%);
 }
 
 .navbar__left--name,
@@ -61,7 +63,8 @@ body {
 @media screen and (min-width: 769px) {
   .about,
   .stats,
-  .stats__bottom {
+  .stats__top,
+  .contact {
     margin: 5rem 10%;
   }
 }

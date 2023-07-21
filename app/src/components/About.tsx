@@ -41,7 +41,7 @@ const About: React.FC = () => {
         <div className="about__left">
           <h1 className="about__left--header">
             Witamy na stronie klanu Dobry Klan. Jesteśmy zgraną ekipą, która gra
-            ze sobą od lat w przyjaznej atmosferze, która liczy aktualnie{" "}
+            ze sobą od lat w przyjaznej atmosferze i aktualnie jest nas{" "}
             {data.members} osób. Jeżeli posiadasz TH14+ zapraszamy w nasze
             skromne progi.
           </h1>

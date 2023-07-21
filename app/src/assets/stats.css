@@ -1,18 +1,3 @@
-.stats__top {
-  display: flex;
-  justify-content: space-between;
-}
-.stats__top button {
-  padding: 0.4rem 4rem;
-  display: flex;
-  justify-content: center;
-  outline: transparent;
-}
-.stats__top button:hover,
-.stats__top button:active {
-  transform: scale(105%);
-  box-shadow: 0 10px 14px rgba(224, 15, 15, 0.3);
-}
 .stats__members table {
   margin-top: 4rem;
   border-collapse: collapse;
@@ -25,29 +10,58 @@
   border: 2px solid black;
   padding: 0.5rem 0;
 }
+.stats__bottom {
+  display: flex;
+  justify-content: space-between;
+}
+.stats__bottom button {
+  padding: 0.4rem 4rem;
+  display: flex;
+  justify-content: center;
+  outline: transparent;
+}
+.stats__bottom button:hover,
+.stats__bottom button:active {
+  transform: scale(105%);
+  box-shadow: 0 10px 14px rgba(224, 15, 15, 0.3);
+}
 @media screen and (min-width: 769px) {
-  .stats__top--left {
+  .stats__bottom--left {
     display: flex;
   }
-  .stats__top--arrow {
+  .stats__bottom--arrow {
     margin: 0.5rem 1rem;
   }
-  .stats__top--left button {
+  .stats__bottom--left button {
     margin-left: 3rem;
   }
-  .stats__bottom {
-    text-align: initial;
+  .stats__top {
+    display: flex;
+    justify-content: space-between;
+  }
+  .stats__top--left {
+    margin-right: 10%;
   }
 }
 @media screen and (max-width: 768px) {
+  .stats__top {
+    justify-content: center;
+    margin: 0;
+  }
   .stats__members table {
     margin-top: 2rem;
   }
   .stats__top {
+    flex-direction: column;
+  }
+  .stats__top h2 {
+    font-size: 1.2rem;
+  }
+  .stats__bottom {
     display: flex;
     flex-direction: column;
   }
-  .stats__top button {
+  .stats__bottom button {
     padding: 0.4rem 6rem;
     width: 5rem;
     margin: 2rem auto;
