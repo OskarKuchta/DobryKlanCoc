@@ -1,7 +1,9 @@
 import React, { useState, useRef } from "react";
 import useFetch from "../Hooks/useFetch";
-
-const StatsTable: React.FC = () => {
+interface StatsTable {
+  url: string;
+}
+const StatsTable: React.FC<StatsTable> = ({ url }) => {
   interface Member {
     name: string;
     role: string;
@@ -11,7 +13,7 @@ const StatsTable: React.FC = () => {
   const filterOptions: string[] = ["NAZWA", "ROLA", "LEVEL", "PUCHARY"];
   const filterList = filterOptions;
   const [filterLoop, setfilterLoop] = useState<number>(1);
-  const { data } = useFetch();
+  const { data } = useFetch(url);
   const statsButton = useRef<HTMLButtonElement>(null);
   const statsBtn = statsButton.current;
   const [arrow, setArrow] = useState<string>("up");

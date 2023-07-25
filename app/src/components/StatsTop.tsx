@@ -1,8 +1,10 @@
 import React from "react";
 import useFetch from "../Hooks/useFetch";
-
-const StatsTop: React.FC = () => {
-  const { data } = useFetch();
+interface StatsTop {
+  url: string;
+}
+const StatsTop: React.FC<StatsTop> = ({ url }) => {
+  const { data } = useFetch(url);
   if (data) {
     let mostDonate: number[] = data.memberList.map(
       (item: any) => item.donations
