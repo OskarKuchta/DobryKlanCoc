@@ -16,8 +16,19 @@ const App: React.FC = () => {
   };
   const [main, setMain] = useState<boolean>(true);
   const [ak, setAk] = useState<boolean>(false);
-  const urlMain = "api/v1/clans/%23Y09R909";
-  const urlAk = "api/v1/clans/%232qupvlcgc";
+  const urlMain: string = "https://api.clashofclans.com/v1/clans/%23Y09R909";
+  const urlAk: string = "https://api.clashofclans.com/v1/clans/%232qupvlcgc";
+
+  // const url: string = "api/v1/clans/%232qupvlcgc";
+  // server: {
+  //   proxy: {
+  //     '/api': {
+  //       target: 'https://api.clashofclans.com',
+  //       changeOrigin: true,
+  //       rewrite: (path) => path.replace(/^\/api/, ''),
+  //     },
+  //   },
+  // }, ustawienia dla developer, server dodajemy do vite.config.ts
   return (
     <div className="bg-wrapper">
       {main && (
