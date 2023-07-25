@@ -2,9 +2,10 @@ import React, { useState, useRef } from "react";
 import useFetch from "../Hooks/useFetch";
 interface AboutMain {
   url: string;
+  onClick: () => void;
 }
 
-const AboutMain: React.FC<AboutMain> = ({ url }) => {
+const AboutMain: React.FC<AboutMain> = ({ url, onClick }) => {
   const { data } = useFetch(url);
   const popupRef = useRef<HTMLParagraphElement>(null);
   const [popup, setPopup] = useState<boolean>(true);
@@ -45,8 +46,12 @@ const AboutMain: React.FC<AboutMain> = ({ url }) => {
             Witamy na stronie klanu Dobry Klan. Jesteśmy zgraną ekipą, która gra
             ze sobą od lat w przyjaznej atmosferze i aktualnie jest nas{" "}
             {data.members} osób. Jeżeli posiadasz TH14+ zapraszamy w nasze
-            skromne progi.
+            skromne progi. Jeżeli zaś posiadasz niższe th zapraszamy do naszej
+            akademii.
           </h1>
+          <button onClick={onClick} className="about__left--button">
+            Akademia
+          </button>
         </div>
         <div className="about__right">
           <img src={data.badgeUrls.medium} alt="logo Dobry Klan" />

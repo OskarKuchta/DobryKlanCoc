@@ -29,9 +29,7 @@ const StatsTop: React.FC<StatsTop> = ({ url }) => {
           <h2>Przegrane wojny: {data.warLosses}</h2>
           <h2>Aktualny win streak: {data.warWinStreak}</h2>
           <h2>
-            Najwięcej donate: {mostDonateName.name}
-            {" => "}
-            {mostDonate[0]}
+            Najwięcej donate: {mostDonateName.name} ({mostDonate[0]})
           </h2>
         </div>
       </div>

@@ -12,10 +12,10 @@ const App: React.FC = () => {
   };
   const changeToAk = () => {
     setMain(false);
-    setAk(true)
+    setAk(true);
   };
-  const [main, setMain] = useState<boolean>(false);
-  const [ak, setAk] = useState<boolean>(true);
+  const [main, setMain] = useState<boolean>(true);
+  const [ak, setAk] = useState<boolean>(false);
   const urlMain = "api/v1/clans/%23Y09R909";
   const urlAk = "api/v1/clans/%232qupvlcgc";
   return (
@@ -24,7 +24,7 @@ const App: React.FC = () => {
         <>
           <Navbar />
           <ErrorBoundary>
-            <AboutMain url={urlMain} />
+            <AboutMain url={urlMain} onClick={changeToAk} />
             <Stats url={urlMain} />
           </ErrorBoundary>
           <Contact />

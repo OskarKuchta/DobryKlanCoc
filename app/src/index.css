@@ -60,6 +60,23 @@ body {
   color: rgba(0, 0, 0, 0);
 }
 
+.stats__bottom button,
+.about__left--button {
+  padding: 0.4rem 4rem;
+  display: flex;
+  justify-content: center;
+  outline: transparent;
+}
+.stats__bottom button:hover,
+.stats__bottom button:active,
+.stats__bottom button:focus,
+.about__left--button:hover,
+.about__left--button:focus,
+.about__left--button:active {
+  transform: scale(105%);
+  box-shadow: 0 10px 14px rgba(224, 15, 15, 0.3);
+}
+
 @media screen and (min-width: 769px) {
   .about,
   .stats,

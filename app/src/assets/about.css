@@ -2,7 +2,9 @@
   display: flex;
   justify-content: space-between;
 }
-
+.about__left--button {
+  margin: 2rem auto;
+}
 .about__right--clanName,
 .about__right--clan-tag {
   font-size: 1.6rem;
