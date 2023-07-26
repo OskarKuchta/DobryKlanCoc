@@ -48,8 +48,8 @@ const AboutAk: React.FC<AboutAkProps> = ({ url, onClick }) => {
             Witamy na stronie klanu #DK_AK#. Jesteśmy zgraną ekipą, która gra ze
             sobą od lat w przyjaznej atmosferze i aktualnie jest nas{" "}
             {data.members} osób. Akademia klanu Dobry Klan. Zapraszamy chętnych
-            od th10 do wspólnej gry. Jeżeli masz th14+ zapraszamy do głównego
-            klanu
+            od TH 10 do wspólnej gry. Jeżeli masz TH 14+ zapraszamy do głównego
+            klanu.
           </h1>
           <button onClick={onClick} className="about__left--button">
             Główny

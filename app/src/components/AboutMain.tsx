@@ -45,8 +45,8 @@ const AboutMain: React.FC<AboutMain> = ({ url, onClick }) => {
           <h1 className="about__left--header">
             Witamy na stronie klanu Dobry Klan. Jesteśmy zgraną ekipą, która gra
             ze sobą od lat w przyjaznej atmosferze i aktualnie jest nas{" "}
-            {data.members} osób. Jeżeli posiadasz TH14+ zapraszamy w nasze
-            skromne progi. Jeżeli zaś posiadasz niższe th zapraszamy do naszej
+            {data.members} osób. Jeżeli posiadasz TH 14+ zapraszamy w nasze
+            skromne progi. Jeżeli zaś posiadasz niższe TH zapraszamy do naszej
             akademii.
           </h1>
           <button onClick={onClick} className="about__left--button">
