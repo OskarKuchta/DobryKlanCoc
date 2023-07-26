@@ -1,7 +1,9 @@
 [[redirects]]
-  from = "/api/*"
-  to = "/.netlify/functions/proxy/:splat"
+  from = "/api/v1/clans/%23Y09R909"
+  to = "https://api.clashofclans.com/v1/clans/%23Y09R909"
   status = 200
 
-[build]
-functions = "netlify/functions"
+[[redirects]]
+  from = "/api/v1/clans/%232qupvlcgc"
+  to = "https://api.clashofclans.com/v1/clans/%232qupvlcgc"
+  status = 200
