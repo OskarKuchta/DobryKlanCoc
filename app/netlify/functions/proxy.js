@@ -8,7 +8,7 @@ export async function handler(event, context) {
       headers: {
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', 
+        'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
 
       },
       body: event.httpMethod === 'POST' ? JSON.stringify(event.body) : null,
