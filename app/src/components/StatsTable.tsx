@@ -31,22 +31,26 @@ const StatsTable: React.FC<StatsTable> = ({ url }) => {
       setArrow((prev) => (prev === "up" ? "down" : "up"));
     };
     const comparator = (a: Member, b: Member) => {
-      if (filterLoop === 0) {
-        return a.name.localeCompare(b.name);
-      } else if (filterLoop === 1) {
-        const roleOrder: { [key: string]: number } = {
-          member: 3,
-          admin: 2,
-          coLeader: 1,
-          leader: 0,
-        };
-        return roleOrder[a.role] - roleOrder[b.role];
-      } else if (filterLoop === 2) {
-        return b.expLevel - a.expLevel;
-      } else if (filterLoop === 3) {
-        return b.trophies - a.trophies;
-      } else {
-        return b.expLevel - a.expLevel;
+      switch (filterLoop) {
+        case 0:
+          return a.name.localeCompare(b.name);
+        case 1:
+          const roleOrder: { [key: string]: number } = {
+            member: 3,
+            admin: 2,
+            coLeader: 1,
+            leader: 0,
+          };
+          return roleOrder[a.role] - roleOrder[b.role];
+
+        case 2:
+          return b.expLevel - a.expLevel;
+
+        case 3:
+          return b.trophies - a.trophies;
+
+        default:
+          return b.expLevel - a.expLevel;
       }
     };
     const sortedList: any[] = [...data.memberList].sort(comparator);
