@@ -8,7 +8,6 @@ interface AboutMain {
 const AboutMain: React.FC<AboutMain> = ({ url, onClick }) => {
   const { data } = useFetch(url);
   const popupRef = useRef<HTMLParagraphElement>(null);
-  const [popup, setPopup] = useState<boolean>(true);
   const [isBlocked, setIsBlocked] = useState<boolean>(false);
   const Refpopup = popupRef.current;
   if (data) {
@@ -16,20 +15,11 @@ const AboutMain: React.FC<AboutMain> = ({ url, onClick }) => {
       if (isBlocked) {
         return;
       }
+      Refpopup.style.display = "block";
       setIsBlocked(true);
       navigator.clipboard.writeText(data.tag);
-      setPopup(true);
-      if (popup && Refpopup) {
-        Refpopup.style.display = "block";
-        let i = 9;
-        const fadeOut = () => {
-          if (i >= 0) {
-            Refpopup.style.opacity = `0.${i}`;
-            i--;
-            setTimeout(fadeOut, 200);
-          }
-        };
-        fadeOut();
+      console.log(copyTag);
+      if (Refpopup) {
         const hide = setTimeout(() => {
           Refpopup.style.display = "none";
           setIsBlocked(false);
@@ -38,7 +28,7 @@ const AboutMain: React.FC<AboutMain> = ({ url, onClick }) => {
           clearTimeout(hide);
         }
       }
-    };
+    }; 
     return (
       <div id="home" className="about">
         <div className="about__left">
