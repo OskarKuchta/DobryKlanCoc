@@ -25,21 +25,29 @@ const App: React.FC = () => {
       {main && (
         <>
           <Navbar />
-          <ErrorBoundary>
-            <AboutMain url={urlMain} onClick={changeToAk} />
-            <Stats url={urlMain} />
-          </ErrorBoundary>
-          <Contact />
+          <main>
+            <ErrorBoundary>
+              <AboutMain url={urlMain} onClick={changeToAk} />
+              <Stats url={urlMain} />
+            </ErrorBoundary>
+          </main>
+          <footer>
+            <Contact />
+          </footer>
         </>
       )}
       {ak && (
         <>
           <Navbar />
-          <ErrorBoundary>
-            <AboutAk url={urlAk} onClick={changeToMain} />
-            <Stats url={urlAk} />
-          </ErrorBoundary>
-          <Contact />
+          <main>
+            <ErrorBoundary>
+              <AboutAk url={urlAk} onClick={changeToMain} />
+              <Stats url={urlAk} />
+            </ErrorBoundary>
+          </main>
+          <footer>
+            <Contact />
+          </footer>
         </>
       )}
     </div>

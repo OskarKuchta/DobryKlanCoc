@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import useFetch from "../Hooks/useFetch";
 
 interface AboutAkProps {
@@ -8,28 +8,20 @@ interface AboutAkProps {
 
 const AboutAk: React.FC<AboutAkProps> = ({ url, onClick }) => {
   const { data } = useFetch(url);
-  const popupRef = useRef<HTMLParagraphElement>(null);
+  const [hide, setHide] = useState("hide");
   const [isBlocked, setIsBlocked] = useState<boolean>(false);
-  const Refpopup = popupRef.current;
   const copyTag = () => {
     if (isBlocked) {
       return;
     }
-    Refpopup.style.display = "block";
+    setHide("");
     setIsBlocked(true);
     navigator.clipboard.writeText(data.tag);
-    console.log(copyTag);
-    if (Refpopup) {
-      const hide = setTimeout(() => {
-        Refpopup.style.display = "none";
-        setIsBlocked(false);
-      }, 2000);
-      if (Refpopup.style.display === "none") {
-        clearTimeout(hide);
-      }
-    }
+    setTimeout(() => {
+      setHide("hide");
+      setIsBlocked(false);
+    }, 2000);
   };
-
   if (data) {
     return (
       <div id="home" className="about">
@@ -50,9 +42,9 @@ const AboutAk: React.FC<AboutAkProps> = ({ url, onClick }) => {
           <h2 className="about__right--clanName">#DK_AK#</h2>
           <div className="about__right--clan">
             <p className="about__right--clan-tag" onClick={copyTag}>
-              {data.tag}
+              #2QUPVLCGC
             </p>
-            <p className="about__right--clan-popup" ref={popupRef}>
+            <p className={`about__right--clan-popup ${hide}`}>
               Tekst skopiowany do schowka.
             </p>
           </div>
