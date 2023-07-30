@@ -21,6 +21,8 @@ const App: React.FC = () => {
 
   // https://api.clashofclans.com/v1/clans/%23Y09R909
   // https://api.clashofclans.com/v1/clans/%232qupvlcgc
+
+  // http://localhost:5173/api/v1/clans/%23Y09R909
   return (
     <div className="bg-wrapper">
       {main && (
