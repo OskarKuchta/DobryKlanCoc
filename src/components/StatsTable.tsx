@@ -24,7 +24,7 @@ const StatsTable: React.FC<StatsTable> = ({ url }) => {
       if (filterLoop === 3) {
         setfilterLoop(0);
       }
-      statsBtn.blur();
+      statsBtn?.blur();
     };
     const hideTable: () => void = () => {
       setIsTableVisible((prev) => !prev);
@@ -41,6 +41,9 @@ const StatsTable: React.FC<StatsTable> = ({ url }) => {
             coLeader: 1,
             leader: 0,
           };
+          if (roleOrder[a.role] === roleOrder[b.role]) {
+            return b.trophies - a.trophies;
+          }
           return roleOrder[a.role] - roleOrder[b.role];
 
         case 2:

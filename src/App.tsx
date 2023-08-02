@@ -17,12 +17,12 @@ const App: React.FC = () => {
   const [main, setMain] = useState<boolean>(true);
   const [ak, setAk] = useState<boolean>(false);
   const urlMain: string = "api/v1/clans/%23Y09R909";
-  const urlAk: string = "api/v1/clans/%232qupvlcgc";
+  const urlAk: string = "api/v1/clans/%23Y09R909";
 
   // https://api.clashofclans.com/v1/clans/%23Y09R909
   // https://api.clashofclans.com/v1/clans/%232qupvlcgc
 
-  // http://localhost:5173/api/v1/clans/%23Y09R909
+  // 
   return (
     <div className="bg-wrapper">
       {main && (
