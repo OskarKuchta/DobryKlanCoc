@@ -14,6 +14,10 @@
   display: flex;
   justify-content: space-between;
 }
+.stats__bottom--arrow:hover {
+  cursor: pointer;
+  color: cyan;
+}
 @media screen and (min-width: 769px) {
   .stats__bottom--left {
     display: flex;
