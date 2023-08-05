@@ -16,7 +16,7 @@
 }
 .stats__bottom--arrow:hover {
   cursor: pointer;
-  color: cyan;
+  color: rgb(0, 13, 255);
 }
 @media screen and (min-width: 769px) {
   .stats__bottom--left {
