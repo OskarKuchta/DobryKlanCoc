@@ -17,9 +17,9 @@ const App: React.FC = () => {
   const [main, setMain] = useState<boolean>(true);
   const [ak, setAk] = useState<boolean>(false);
   const urlMain: string =
-    "http://localhost:8888/.netlify/functions/server/clans/main";
+    "https://dobry-klan.netlify.app/.netlify/functions/server/clans/main";
   const urlAk: string =
-    "http://localhost:8888/.netlify/functions/server/clans/ak";
+    "https://dobry-klan.netlify.app/.netlify/functions/server/clans/ak";
 
   // https://api.clashofclans.com/v1/clans/%23Y09R909
   // https://api.clashofclans.com/v1/clans/%232qupvlcgc
