@@ -16,13 +16,11 @@ const App: React.FC = () => {
   };
   const [main, setMain] = useState<boolean>(true);
   const [ak, setAk] = useState<boolean>(false);
-  const urlMain: string =
-    "https://dobry-klan.netlify.app/.netlify/functions/server/clans/main";
-  const urlAk: string =
-    "https://dobry-klan.netlify.app/.netlify/functions/server/clans/ak";
+  const urlMain: string = "api/v1/clans/%23Y09R909";
+  const urlAk: string = "api/v1/clans/%232qupvlcgc";
 
-  // api/v1/clans/%23Y09R909
-  // api/v1/clans/%232qupvlcgc linki dla dev
+  // https://dobry-klan.netlify.app/.netlify/functions/server/clans/main
+  // https://dobry-klan.netlify.app/.netlify/functions/server/clans/ak linki do serwera
   return (
     <div className="bg-wrapper">
       {main && (
