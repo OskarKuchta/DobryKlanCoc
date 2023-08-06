@@ -1,4 +1,3 @@
-/* eslint-env node */
 import module from module;
 module.exports = {
   root: true,
