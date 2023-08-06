@@ -57,17 +57,17 @@
 
 .first-line {
   top: 0;
-  right: 0.08rem;
+  right: 0;
 }
 .second-line {
   top: 50%;
   transform: translateY(-50%);
-  right: 0.08rem;
+  right: 0;
 }
 
 .third-line {
   bottom: 0;
-  right: 0.08rem;
+  right: 0;
 }
 
 .first {
