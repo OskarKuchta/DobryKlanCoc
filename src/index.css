@@ -43,7 +43,7 @@ body {
 .navbar__left--name,
 .about__right--clanName,
 .about__right--clan-tag {
-  background: linear-gradient(to right, #5ca9f7, #6c61f9, #f84666, #f99a42);
+  background: linear-gradient(to right, #5c5ace, #f405b4);
   background-size: 200% 200%;
   animation: rainbow 2s ease-in-out infinite;
   background-clip: text;

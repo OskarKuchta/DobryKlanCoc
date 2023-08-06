@@ -2,17 +2,29 @@ import React from "react";
 
 const Contact: React.FC = () => {
   return (
-    <div id="contact" className="contact">
-      <h2 className="contact__header">W razie pytań zapraszamy do kontaktu: </h2>
-      <h3>
-        Discord:{" "}
-        <a className="contact--first"
-          href="https://discord.com/channels/967750458858938418/973609130898108446"
-          target="blank">
+    <footer id="contact" className="contact">
+      <h2 className="contact__header">Kontakt z nami: </h2>
+      <div className="contact__first">
+        <i className="fa-brands fa-discord contact__first--icon"></i>
+        <a
+          className="contact__first--link"
+          href="https://discord.gg/AaJ6qcw6Zs"
+          target="blank"
+        >
           Główny discord klanu
         </a>
-      </h3>
-    </div>
+      </div>
+      <div className="contact__second">
+        <i className="fa-brands fa-square-facebook contact__second--icon"></i>
+        <a
+          className="contact__second--link"
+          href="https://discord.gg/AaJ6qcw6Zs"
+          target="blank"
+        >
+          Administrator strony
+        </a>
+      </div>
+    </footer>
   );
 };
 
