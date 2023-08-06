@@ -34,7 +34,7 @@ const AboutAk: React.FC<AboutAkProps> = ({ url, onClick }) => {
             klanu.
           </h1>
           <button onClick={onClick} className="about__left--button">
-            Główny
+            GŁÓWNY
           </button>
         </div>
         <div className="about__right">

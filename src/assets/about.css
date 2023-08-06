@@ -5,6 +5,9 @@
 .about__left--button {
   margin: 2rem auto;
 }
+.about__left--button:hover {
+  color: rgb(174, 15, 41);
+}
 .about__right--clanName,
 .about__right--clan-tag {
   font-size: 1.6rem;

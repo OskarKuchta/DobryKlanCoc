@@ -66,7 +66,7 @@ const StatsTable: React.FC<StatsTable> = ({ url }) => {
               <button
                 onClick={filterCurrent}
                 ref={statsButton}
-                className="stats__bottom--hover"
+                className="stats__bottom--button"
               >
                 {filterList[filterLoop + 1 <= 3 ? filterLoop + 1 : 0]}
               </button>

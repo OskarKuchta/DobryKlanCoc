@@ -4,11 +4,18 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 10px;
 }
-
 .contact__header {
-  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
+.contact__header--text {
+  font-size: 2rem;
+  display: inline;
+}
+.contact__header--envelope {
+  margin-left: 1rem;
+}
 .contact__first,
 .contact__second {
   margin-top: 2rem;
@@ -22,15 +29,27 @@
   width: 4rem;
   margin-right: 2rem;
 }
-.contact__second--icon {
-  padding-right: 0.6rem;
-}
 
+.contact__second--icon {
+  padding-right: 0.7rem;
+}
+.contact__first--icon:hover,
+.contact__second--icon:hover,
+.contact__header--envelope:hover {
+  color: blue;
+}
 .contact__first--link,
 .contact__second--link {
   font-size: 1.5rem;
   text-decoration: none;
   color: var(--white);
 }
-
-
+@media screen and (max-width: 768px) {
+  .contact__header--text {
+    font-size: 1.5rem;
+  }
+  .contact__first--link,
+  .contact__second--link {
+    font-size: 1.2rem;
+  }
+}

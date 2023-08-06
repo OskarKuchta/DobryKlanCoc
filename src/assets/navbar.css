@@ -41,7 +41,9 @@
   position: absolute;
   top: 1.5rem;
   right: 2rem;
-  padding: 0.5rem;
+  padding: 0.7rem;
+  border: 2px solid black;
+  cursor: pointer;
 }
 .first-line,
 .second-line,
@@ -55,14 +57,17 @@
 
 .first-line {
   top: 0;
+  right: 0.08rem;
 }
 .second-line {
   top: 50%;
   transform: translateY(-50%);
+  right: 0.08rem;
 }
 
 .third-line {
   bottom: 0;
+  right: 0.08rem;
 }
 
 .first {
@@ -115,11 +120,11 @@
   transition: 0.8s background-color ease-in-out, 0.5s color ease-in-out;
 }
 @media screen and (min-width: 769px) {
-    .navbar__left--photo {
-        width: 3rem;
-      }
-      .navbar__left--name {
-        font-size: 1.3rem;
-        margin-left: 2rem;
-      }
+  .navbar__left--photo {
+    width: 3rem;
+  }
+  .navbar__left--name {
+    font-size: 1.3rem;
+    margin-left: 2rem;
+  }
 }

@@ -33,7 +33,7 @@ const AboutMain: React.FC<AboutMain> = ({ url, onClick }) => {
             akademii.
           </h1>
           <button onClick={onClick} className="about__left--button">
-            Akademia
+            AKADEMIA
           </button>
         </div>
         <div className="about__right">

@@ -24,6 +24,10 @@ const Navbar: React.FC = () => {
   const toggleMenu: Functions = () => {
     setShowMenu(!showMenu);
     setIsClicked(!isClicked);
+    switch (showMenu) {
+      case true:
+        return;
+    }
   };
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, a: number) => {
     e.preventDefault();
@@ -58,7 +62,7 @@ const Navbar: React.FC = () => {
             </a>
           </li>
           <li className="navbar__right--element hover">
-            <a href="#stats" onClick={(e) => handleScroll(e, 120)}>
+            <a href="#stats" onClick={(e) => handleScroll(e, 100)}>
               STATS
             </a>
           </li>
@@ -68,29 +72,27 @@ const Navbar: React.FC = () => {
             </a>
           </li>
         </ul>
-        <div className="navbar__right--hamburger-container">
+        <div
+          className="navbar__right--hamburger-container"
+          onClick={toggleMenu}
+          onMouseEnter={handleHover}
+          onMouseLeave={handleMouseLeave}
+        >
           <div
             className={`navbar__right--hamburger-menu ${
               isClicked ? "active" : ""
             }`}
-            onClick={toggleMenu}
           >
             <span
               className={`first-line ${isClicked ? "first" : ""}`}
               style={hoverStyles}
-              onMouseEnter={handleHover}
-              onMouseLeave={handleMouseLeave}
             ></span>
             <span
               style={hoverStyles}
-              onMouseEnter={handleHover}
-              onMouseLeave={handleMouseLeave}
               className={`second-line ${isClicked ? "second" : ""}`}
             ></span>
             <span
               style={hoverStyles}
-              onMouseEnter={handleHover}
-              onMouseLeave={handleMouseLeave}
               className={`third-line ${isClicked ? "third" : ""}`}
             ></span>
           </div>
