@@ -3,11 +3,11 @@ import React from "react";
 const Contact: React.FC = () => {
   return (
     <footer id="contact" className="contact">
-      <div className="contact__header">
+      <section className="contact__header">
         <h2 className="contact__header--text">Kontakt z nami: </h2>{" "}
         <i className="fa-solid fa-envelope contact__header--envelope"></i>
-      </div>
-      <div className="contacts">
+      </section>
+      <section className="contacts">
         <div className="contacts__discord">
           <i className="fa-brands fa-discord contacts__discord--icon"></i>
           <a
@@ -48,7 +48,7 @@ const Contact: React.FC = () => {
             Administrator strony
           </a>
         </div>
-      </div>
+      </section>
     </footer>
   );
 };

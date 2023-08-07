@@ -15,7 +15,7 @@ const StatsTop: React.FC<StatsTop> = ({ url }) => {
       (item: any) => item.donations === topDonator
     );
     return (
-      <div className="stats__top" id="stats">
+      <section className="stats__top" id="stats">
         <div className="stats__top--left">
           <h2>Kraj: Polska</h2>
           <h2>Level klanu: {data.clanLevel}</h2>
@@ -32,7 +32,7 @@ const StatsTop: React.FC<StatsTop> = ({ url }) => {
             Najwięcej donate: {mostDonateName.name} ({mostDonate[0]})
           </h2>
         </div>
-      </div>
+      </section>
     );
   }
 };

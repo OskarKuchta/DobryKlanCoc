@@ -59,7 +59,7 @@ const StatsTable: React.FC<StatsTable> = ({ url }) => {
     const sortedList: any[] = [...data.memberList].sort(comparator);
     return (
       <>
-        <div className="stats">
+        <section className="stats">
           <div className="stats__bottom">
             <div className="stats__bottom--left">
               <h2>Lista graczy względem: {filterList[filterLoop]}</h2>
@@ -111,7 +111,7 @@ const StatsTable: React.FC<StatsTable> = ({ url }) => {
               </table>
             </div>
           )}
-        </div>
+        </section>
       </>
     );
   }

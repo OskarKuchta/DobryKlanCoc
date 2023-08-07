@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "./components/Navbar";
 import { ErrorBoundary } from "./Hooks/useFetch";
+import data from "./Hooks/useFetch";
 import Stats from "./components/Stats";
 import Contact from "./components/Contact";
 import AboutMain from "./components/AboutMain";
@@ -16,13 +17,14 @@ const App: React.FC = () => {
   };
   const [main, setMain] = useState<boolean>(true);
   const [ak, setAk] = useState<boolean>(false);
-  const urlMain: string =
-    "https://dobry-klan.netlify.app/.netlify/functions/server/clans/main";
-  const urlAk: string =
-    "https://dobry-klan.netlify.app/.netlify/functions/server/clans/ak"; // linki do serwera
+  // const urlMain: string =
+  //   "https://dobry-klan.netlify.app/.netlify/functions/server/clans/main";
+  // const urlAk: string =
+  //   "https://dobry-klan.netlify.app/.netlify/functions/server/clans/ak"; // linki do serwera
 
-  // const urlMain: string = "api/v1/clans/%23Y09R909";
-  // const urlAk: string ="api/v1/clans/%232qupvlcgc";  // linki proxy
+  const urlMain: string = "api/v1/clans/%23Y09R909";
+  const urlAk: string = "api/v1/clans/%232qupvlcgc"; // linki proxy
+
   return (
     <div className="bg-wrapper">
       {main && (
@@ -34,7 +36,7 @@ const App: React.FC = () => {
               <Stats url={urlMain} />
             </ErrorBoundary>
           </main>
-          <Contact />
+          {data && <Contact />}
         </>
       )}
       {ak && (
@@ -46,11 +48,10 @@ const App: React.FC = () => {
               <Stats url={urlAk} />
             </ErrorBoundary>
           </main>
-          <Contact />
+          {data && <Contact />}
         </>
       )}
     </div>
   );
 };
-
 export default App;

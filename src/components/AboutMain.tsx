@@ -7,7 +7,7 @@ interface AboutMain {
 
 const AboutMain: React.FC<AboutMain> = ({ url, onClick }) => {
   const { data } = useFetch(url);
-  const [hide, setHide] = useState("hide");
+  const [hide, setHide] = useState<string>("hide");
   const [isBlocked, setIsBlocked] = useState<boolean>(false);
   const copyTag = () => {
     if (isBlocked) {
@@ -23,7 +23,7 @@ const AboutMain: React.FC<AboutMain> = ({ url, onClick }) => {
   };
   if (data) {
     return (
-      <div id="home" className="about">
+      <section id="home" className="about">
         <div className="about__left">
           <h1 className="about__left--header">
             Witamy na stronie klanu Dobry Klan. Jesteśmy zgraną ekipą, która gra
@@ -48,7 +48,7 @@ const AboutMain: React.FC<AboutMain> = ({ url, onClick }) => {
             </p>
           </div>
         </div>
-      </div>
+      </section>
     );
   }
 };
