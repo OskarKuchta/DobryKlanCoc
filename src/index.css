@@ -67,13 +67,17 @@ body {
   justify-content: center;
   outline: transparent;
 }
+.stats__bottom--button,
+.about__left--button {
+  transition: scale 0.3s ease-in-out, box-shadpw 0.3s ease-in-out;
+}
 .stats__bottom button:hover,
 .stats__bottom button:active,
 .stats__bottom button:focus,
 .about__left--button:hover,
 .about__left--button:focus,
 .about__left--button:active {
-  transform: scale(105%);
+  scale: 105%;
   box-shadow: 0 10px 14px rgba(224, 15, 15, 0.3);
 }
 

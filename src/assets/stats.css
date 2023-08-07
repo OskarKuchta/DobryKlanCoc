@@ -14,11 +14,15 @@
   display: flex;
   justify-content: space-between;
 }
+.stats__bottom--arrow {
+  transition: color 0.3s ease-in-out, scale 0.3s ease-in-out;
+}
 .stats__bottom--arrow:hover {
   cursor: pointer;
   color: rgb(76, 0, 255);
   scale: 155%;
 }
+
 .stats__bottom--button:hover {
   color: rgb(174, 15, 41);
 }
