@@ -65,7 +65,8 @@ body {
   padding: 0.4rem 4rem;
   display: flex;
   justify-content: center;
-  outline: transparent;
+  transition: scale 0.3s ease-in-out, box-shadow 0.2s ease-in-out;
+  outline-color: rgba(255, 0, 0, 0.6);
 }
 .stats__bottom button:hover,
 .stats__bottom button:active,
@@ -73,10 +74,9 @@ body {
 .about__left--button:hover,
 .about__left--button:focus,
 .about__left--button:active {
-  transform: scale(105%);
+  scale: 105%;
   box-shadow: 0 10px 14px rgba(224, 15, 15, 0.3);
 }
-
 @media screen and (min-width: 769px) {
   .about,
   .stats,

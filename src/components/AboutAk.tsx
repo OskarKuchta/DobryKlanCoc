@@ -8,9 +8,9 @@ interface AboutAkProps {
 
 const AboutAk: React.FC<AboutAkProps> = ({ url, onClick }) => {
   const { data } = useFetch(url);
-  const [hide, setHide] = useState("hide");
+  const [hide, setHide] = useState<string>("hide");
   const [isBlocked, setIsBlocked] = useState<boolean>(false);
-  const copyTag = () => {
+  const copyTag: () => void = () => {
     if (isBlocked) {
       return;
     }
@@ -24,7 +24,7 @@ const AboutAk: React.FC<AboutAkProps> = ({ url, onClick }) => {
   };
   if (data) {
     return (
-      <div id="home" className="about">
+      <section id="home" className="about">
         <div className="about__left">
           <h1 className="about__left--header">
             Witamy na stronie klanu #DK_AK#. Jesteśmy zgraną ekipą, która gra ze
@@ -49,7 +49,7 @@ const AboutAk: React.FC<AboutAkProps> = ({ url, onClick }) => {
             </p>
           </div>
         </div>
-      </div>
+      </section>
     );
   } else {
     return null;

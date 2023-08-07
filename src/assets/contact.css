@@ -16,40 +16,55 @@
 .contact__header--envelope {
   margin-left: 1rem;
 }
-.contact__first,
-.contact__second {
+.contacts {
+  margin-left: 35%;
+}
+
+.contacts__discord,
+.contacts__facebook {
   margin-top: 2rem;
   display: flex;
   align-items: center;
-  justify-content: center;
 }
-
-.contact__first--icon,
-.contact__second--icon {
+.contacts__discord--icon,
+.contacts__facebook--icon {
   width: 4rem;
   margin-right: 2rem;
 }
-
-.contact__second--icon {
-  padding-right: 0.7rem;
+.contacts__discord--icon,
+.contacts__facebook--icon,
+.contact__header--envelope {
+  transition: color 0.3s ease-in-out;
 }
-.contact__first--icon:hover,
-.contact__second--icon:hover,
+.contacts__discord--icon:hover,
+.contacts__facebook--icon:hover,
 .contact__header--envelope:hover {
   color: blue;
 }
-.contact__first--link,
-.contact__second--link {
+.contacts__discord--link,
+.contacts__facebook--link {
   font-size: 1.5rem;
   text-decoration: none;
   color: var(--white);
+}
+@media screen and (max-width: 1100px) {
+  .contacts {
+    margin-left: 25%;
+  }
 }
 @media screen and (max-width: 768px) {
   .contact__header--text {
     font-size: 1.5rem;
   }
-  .contact__first--link,
-  .contact__second--link {
-    font-size: 1.2rem;
+  .contacts__discord--link,
+  .contacts__facebook--link {
+    font-size: 1.1rem;
+    text-align: start;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .contacts {
+    margin-left: 5%;
   }
 }

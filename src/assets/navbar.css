@@ -42,7 +42,9 @@
   top: 1.5rem;
   right: 2rem;
   padding: 0.7rem;
-  border: 2px solid black;
+  border: 2px solid white;
+  outline-color: black;
+  border-radius: 4px;
   cursor: pointer;
 }
 .first-line,
