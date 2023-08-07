@@ -61,7 +61,7 @@ export const ErrorBoundary: React.FC<any> = ({ children }) => {
   };
 
   if (hasError) {
-    return <div className="">Something went wrong: {error?.toString()}</div>;
+    return <div className="error">Something went wrong: {error?.toString()}</div>;
   }
 
   return <div onError={handleOnError}>{children}</div>;

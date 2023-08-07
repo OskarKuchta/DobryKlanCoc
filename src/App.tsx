@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import { ErrorBoundary } from "./Hooks/useFetch";
-import data from "./Hooks/useFetch";
 import Stats from "./components/Stats";
 import Contact from "./components/Contact";
 import AboutMain from "./components/AboutMain";
@@ -15,6 +14,15 @@ const App: React.FC = () => {
     setMain(false);
     setAk(true);
   };
+  const [showContact, setShowContact] = useState<boolean>(false);
+  useEffect(() => {
+    const load: NodeJS.Timeout = setTimeout(() => {
+      setShowContact(true);
+    }, 1500);
+    return () => {
+      clearTimeout(load);
+    };
+  });
   const [main, setMain] = useState<boolean>(true);
   const [ak, setAk] = useState<boolean>(false);
   const urlMain: string =
@@ -36,7 +44,7 @@ const App: React.FC = () => {
               <Stats url={urlMain} />
             </ErrorBoundary>
           </main>
-          {data && <Contact />}
+          {showContact && <Contact />}
         </>
       )}
       {ak && (
@@ -48,7 +56,7 @@ const App: React.FC = () => {
               <Stats url={urlAk} />
             </ErrorBoundary>
           </main>
-          {data && <Contact />}
+          {showContact && <Contact />}
         </>
       )}
     </div>

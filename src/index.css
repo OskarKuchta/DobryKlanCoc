@@ -39,7 +39,6 @@ body {
   z-index: -1;
   filter: brightness(70%);
 }
-
 .navbar__left--name,
 .about__right--clanName,
 .about__right--clan-tag {
@@ -59,7 +58,6 @@ body {
 .about__right--clan-tag:hover {
   color: rgba(0, 0, 0, 0);
 }
-
 .stats__bottom button,
 .about__left--button {
   padding: 0.4rem 4rem;
@@ -76,6 +74,13 @@ body {
 .about__left--button:active {
   scale: 105%;
   box-shadow: 0 10px 14px rgba(224, 15, 15, 0.3);
+}
+.error {
+  font-size: 5rem;
+  color: (--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media screen and (min-width: 769px) {
   .about,

@@ -11,7 +11,7 @@ const StatsTop: React.FC<StatsTop> = ({ url }) => {
     );
     mostDonate.sort((a: number, b: number) => b - a);
     const topDonator: number = mostDonate[0];
-    let mostDonateName = data.memberList.find(
+    let mostDonateName: any = data.memberList.find(
       (item: any) => item.donations === topDonator
     );
     return (

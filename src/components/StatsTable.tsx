@@ -56,7 +56,7 @@ const StatsTable: React.FC<StatsTable> = ({ url }) => {
           return b.expLevel - a.expLevel;
       }
     };
-    const sortedList: any[] = [...data.memberList].sort(comparator);
+    const sortedList: Member[] = [...data.memberList].sort(comparator);
     return (
       <>
         <section className="stats">

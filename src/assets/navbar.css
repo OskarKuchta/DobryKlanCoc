@@ -121,6 +121,7 @@
   background-color: rgb(60, 54, 54);
   transition: 0.8s background-color ease-in-out, 0.5s color ease-in-out;
 }
+
 @media screen and (min-width: 769px) {
   .navbar__left--photo {
     width: 3rem;

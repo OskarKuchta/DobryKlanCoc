@@ -1,11 +1,12 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import logo from "../assets/logo.png";
 
 const Navbar: React.FC = () => {
   const [showMenu, setShowMenu] = useState<boolean>(false);
   const [isClicked, setIsClicked] = useState<boolean>(false);
   const [isHovered, setIsHovered] = useState<boolean>(false);
-
+  const hamburgerRef = useRef<HTMLDivElement>(null);
+  const hamburger = hamburgerRef.current;
   interface Functions {
     (): void;
   }
@@ -23,23 +24,28 @@ const Navbar: React.FC = () => {
   };
   const toggleMenu: Functions = () => {
     setShowMenu(!showMenu);
-    setIsClicked(!isClicked);
-    switch (showMenu) {
-      case true:
-        return;
+    if (showMenu) {
     }
+    setIsClicked(!isClicked);
+    setIsHovered(true);
+    setTimeout(() => {
+      setIsHovered(false);
+    }, 2000);
   };
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, a: number) => {
     e.preventDefault();
     const targetId: string | null = e.currentTarget.getAttribute("href");
     if (targetId) {
-      const targetElement = document.querySelector(targetId) as HTMLElement;
+      const targetElement: HTMLElement = document.querySelector(
+        targetId
+      ) as HTMLElement;
       if (targetElement) {
-        const targetPosition = targetElement.offsetTop - a;
+        const targetPosition: number = targetElement.offsetTop - a;
         window.scrollTo({
           top: targetPosition,
           behavior: "smooth",
         });
+        hamburger.focus();
       }
     }
   };
@@ -75,6 +81,19 @@ const Navbar: React.FC = () => {
         <div
           className="navbar__right--hamburger-container"
           onClick={toggleMenu}
+          ref={hamburgerRef}
+          tabIndex={0}
+          onKeyDown={(e) => {
+            if (showMenu && e.key === "Tab") {
+              e.preventDefault();
+            }
+            if (e.key === "Enter" || e.key === "m") {
+              toggleMenu();
+            } else if (e.key === "Escape") {
+              setIsClicked(false);
+              setShowMenu(false);
+            }
+          }}
           onMouseEnter={handleHover}
           onMouseLeave={handleMouseLeave}
         >

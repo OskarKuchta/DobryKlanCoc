@@ -36,16 +36,21 @@
 .contact__header--envelope {
   transition: color 0.3s ease-in-out;
 }
-.contacts__discord--icon:hover,
-.contacts__facebook--icon:hover,
-.contact__header--envelope:hover {
-  color: blue;
-}
 .contacts__discord--link,
 .contacts__facebook--link {
   font-size: 1.5rem;
   text-decoration: none;
   color: var(--white);
+  padding: 0.2rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.contacts__discord--icon:hover,
+.contacts__facebook--icon:hover,
+.contact__header--envelope:hover,
+.contacts__discord--link:hover,
+.contacts__facebook--link:hover {
+  color: blue;
 }
 @media screen and (max-width: 1100px) {
   .contacts {
