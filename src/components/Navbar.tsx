@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo.webp";
 
 const Navbar: React.FC = () => {
   const [showMenu, setShowMenu] = useState<boolean>(false);
