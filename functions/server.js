@@ -18,6 +18,7 @@ router.get("/clans/main", async (req, res) => {
             Authorization: `Bearer ${token}`,
         };
         res.header("Access-Control-Allow-Origin", "*");
+        res.header("Cache-Control", "public, max-age=31536000");
 
         const response = await axios.get(url, { headers });
         res.json(response.data);
@@ -37,6 +38,7 @@ router.get("/clans/ak", async (req, res) => {
             Authorization: `Bearer ${token}`,
         };
         res.header("Access-Control-Allow-Origin", "*");
+        res.header("Cache-Control", "public, max-age=31536000");
 
         const response = await axios.get(url, { headers });
         res.json(response.data);
