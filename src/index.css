@@ -64,7 +64,7 @@ body {
   display: flex;
   justify-content: center;
   transition: scale 0.3s ease-in-out, box-shadow 0.2s ease-in-out;
-  outline-color: rgba(255, 0, 0, 0.6);
+  outline: transparent;
 }
 .stats__bottom button:hover,
 .stats__bottom button:active,
@@ -72,8 +72,9 @@ body {
 .about__left--button:hover,
 .about__left--button:focus,
 .about__left--button:active {
-  scale: 105%;
+  scale: 115%;
   box-shadow: 0 10px 14px rgba(224, 15, 15, 0.3);
+  color: rgb(174, 15, 41);
 }
 .error {
   font-size: 5rem;
@@ -88,5 +89,10 @@ body {
   .stats__top,
   .contact {
     margin: 5rem 10%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  html {
+    font-size: 18px;
   }
 }

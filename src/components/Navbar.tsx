@@ -59,7 +59,10 @@ const Navbar: React.FC = () => {
         <span className="navbar__left--name">DOBRY KLAN</span>
       </div>
       <div className="navbar__right">
-        <ul className={`lists ${showMenu ? "show" : ""}`}>
+        <ul
+          className={`lists ${showMenu ? "show" : ""}`}
+          tabIndex={showMenu ? 0 : -1}
+        >
           <li className="navbar__right--element hover">
             <a href="#home" onClick={(e) => handleScroll(e, 300)}>
               HOME

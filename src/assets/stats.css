@@ -23,9 +23,7 @@
   scale: 155%;
 }
 
-.stats__bottom--button:hover {
-  color: rgb(174, 15, 41);
-}
+
 @media screen and (min-width: 769px) {
   .stats__bottom--left {
     display: flex;
@@ -66,5 +64,10 @@
     padding: 0.4rem 6rem;
     width: 5rem;
     margin: 2rem auto;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .stats__members {
+    font-size: 1.2rem;
   }
 }
