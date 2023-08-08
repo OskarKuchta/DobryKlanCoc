@@ -58,7 +58,9 @@ const AboutMain: React.FC<AboutMain> = ({ url, onClick }) => {
             </p>
           </div>
         </div>
-        {showTooltip && <Tooltip id="tooltip-main" place="bottom" delayShow={100}/>}
+        {showTooltip && (
+          <Tooltip id="tooltip-main" place="bottom" delayShow={100} />
+        )}
       </section>
     );
   }
