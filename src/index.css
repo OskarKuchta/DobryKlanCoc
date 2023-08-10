@@ -83,6 +83,18 @@ body {
   justify-content: center;
   align-items: center;
 }
+nav {
+  z-index: 2;
+}
+.about__left {
+  position: relative;
+  z-index: 1;
+}
+.stats__bottom--button,
+.about__left--button {
+  z-index: 0;
+}
+
 @media screen and (min-width: 769px) {
   .about,
   .stats,

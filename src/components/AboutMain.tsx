@@ -37,7 +37,10 @@ const AboutMain: React.FC<AboutMain> = ({ url, onClick }) => {
             skromne progi. Jeżeli zaś posiadasz niższe TH zapraszamy do naszej
             akademii.
           </h1>
-          <button onClick={onClick} className="about__left--button">
+          <button
+            onClick={onClick}
+            className="about__left--button"
+          >
             AKADEMIA
           </button>
         </div>

@@ -117,7 +117,8 @@
   text-decoration: none;
   color: rgb(239, 230, 230);
 }
-.navbar__right--element a:hover {
+.navbar__right--element a:hover,
+.navbar__right--element a:focus {
   color: cyan;
   background-color: rgb(60, 54, 54);
   transition: 0.8s background-color ease-in-out, 0.5s color ease-in-out;

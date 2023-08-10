@@ -1,18 +1,33 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import logo from "../assets/logo.webp";
 
 const Navbar: React.FC = () => {
-  const [showMenu, setShowMenu] = useState<boolean>(false);
-  const [isClicked, setIsClicked] = useState<boolean>(false);
-  const [isHovered, setIsHovered] = useState<boolean>(false);
-  const hamburgerRef = useRef<HTMLDivElement>(null);
-  const hamburger = hamburgerRef.current;
   interface Functions {
     (): void;
   }
   type hoverType = {
     backgroundColor: string;
   };
+  const [showMenu, setShowMenu] = useState<boolean>(false);
+  const [isClicked, setIsClicked] = useState<boolean>(false);
+  const [isHovered, setIsHovered] = useState<boolean>(false);
+  const hamburgerRef = useRef<HTMLDivElement>(null);
+  const hamburger = hamburgerRef.current;
+
+  useEffect(() => {
+    const handleEscapeKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setShowMenu(false);
+        setIsClicked(false);
+      }
+    };
+
+    document.addEventListener("keyup", handleEscapeKey);
+
+    return () => {
+      document.removeEventListener("keyup", handleEscapeKey);
+    };
+  }, []);
   const handleHover: Functions = () => {
     setIsHovered(true);
   };
@@ -60,17 +75,14 @@ const Navbar: React.FC = () => {
         <span className="navbar__left--name">DOBRY KLAN</span>
       </div>
       <div className="navbar__right">
-        <ul
-          className={`lists ${showMenu ? "show" : ""}`}
-          tabIndex={showMenu ? 0 : -1}
-        >
+        <ul className={`lists ${showMenu ? "show" : ""}`}>
           <li className="navbar__right--element hover">
             <a href="#home" onClick={(e) => handleScroll(e, 300)}>
               HOME
             </a>
           </li>
           <li className="navbar__right--element hover">
-            <a href="#stats" onClick={(e) => handleScroll(e, 100)}>
+            <a href="#stats" onClick={(e) => handleScroll(e, 100)} z-index={10}>
               STATS
             </a>
           </li>
@@ -88,9 +100,6 @@ const Navbar: React.FC = () => {
           onFocus={() => setIsHovered(true)}
           onBlur={() => RemoveFocus(0)}
           onKeyDown={(e) => {
-            if (showMenu && e.key === "Tab") {
-              e.preventDefault();
-            }
             if (e.key === "m") {
               toggleMenu();
             }
