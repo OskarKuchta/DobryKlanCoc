@@ -5,7 +5,6 @@ const Navbar: React.FC = () => {
   const [showMenu, setShowMenu] = useState<boolean>(false);
   const [isClicked, setIsClicked] = useState<boolean>(false);
   const [isHovered, setIsHovered] = useState<boolean>(false);
-  const [isFocused, setIsFocused] = useState<boolean>(false);
   const hamburgerRef = useRef<HTMLDivElement>(null);
   const hamburger = hamburgerRef.current;
   interface Functions {
@@ -23,12 +22,14 @@ const Navbar: React.FC = () => {
   const hoverStyles: hoverType = {
     backgroundColor: isHovered ? "#216ECC" : "rgb(235, 218, 218)",
   };
+  const RemoveFocus = (num: number) => {
+    setTimeout(() => {
+      setIsHovered(false);
+    }, num);
+  };
   const toggleMenu: Functions = () => {
     setShowMenu(!showMenu);
-    if (showMenu) {
-    }
     setIsClicked(!isClicked);
-    setIsHovered(true);
   };
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, a: number) => {
     e.preventDefault();
@@ -84,8 +85,8 @@ const Navbar: React.FC = () => {
           onClick={toggleMenu}
           ref={hamburgerRef}
           tabIndex={0}
-          onFocus={() => setIsFocused(true)}
-          onBlur={() => setIsFocused(false)}
+          onFocus={() => setIsHovered(true)}
+          onBlur={() => RemoveFocus(0)}
           onKeyDown={(e) => {
             if (showMenu && e.key === "Tab") {
               e.preventDefault();
@@ -112,14 +113,14 @@ const Navbar: React.FC = () => {
           >
             <span
               className={`first-line ${isClicked ? "first" : ""}`}
-              style={isFocused ? { backgroundColor: "#216ECC" } : hoverStyles}
+              style={isHovered ? { backgroundColor: "#216ECC" } : hoverStyles}
             ></span>
             <span
-              style={isFocused ? { backgroundColor: "#216ECC" } : hoverStyles}
+              style={isHovered ? { backgroundColor: "#216ECC" } : hoverStyles}
               className={`second-line ${isClicked ? "second" : ""}`}
             ></span>
             <span
-              style={isFocused ? { backgroundColor: "#216ECC" } : hoverStyles}
+              style={isHovered ? { backgroundColor: "#216ECC" } : hoverStyles}
               className={`third-line ${isClicked ? "third" : ""}`}
             ></span>
           </div>
