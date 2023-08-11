@@ -14,16 +14,21 @@
   display: flex;
   justify-content: space-between;
 }
-.stats__bottom--arrow {
+.stats__bottom--arrow,
+.stats__bottom--button-arrow {
   transition: color 0.3s ease-in-out, scale 0.3s ease-in-out;
 }
-.stats__bottom--arrow:hover {
+.stats__bottom--arrow:hover,
+.stats__bottom--button-arrow:focus {
   cursor: pointer;
   color: rgb(76, 0, 255);
   scale: 155%;
 }
-
-
+.stats__bottom--button-arrow {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
 @media screen and (min-width: 769px) {
   .stats__bottom--left {
     display: flex;
@@ -31,7 +36,7 @@
   .stats__bottom--arrow {
     margin: 0.5rem 1rem;
   }
-  .stats__bottom--left button {
+  .stats__bottom--button {
     margin-left: 3rem;
   }
   .stats__top {
@@ -60,7 +65,7 @@
     display: flex;
     flex-direction: column;
   }
-  .stats__bottom button {
+  .stats__bottom--button {
     padding: 0.4rem 6rem;
     width: 5rem;
     margin: 2rem auto;

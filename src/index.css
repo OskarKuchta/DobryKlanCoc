@@ -58,7 +58,7 @@ body {
 .about__right--clan-tag:hover {
   color: rgba(0, 0, 0, 0);
 }
-.stats__bottom button,
+.stats__bottom--button,
 .about__left--button {
   padding: 0.4rem 4rem;
   display: flex;
@@ -66,9 +66,9 @@ body {
   transition: scale 0.3s ease-in-out, box-shadow 0.2s ease-in-out;
   outline: transparent;
 }
-.stats__bottom button:hover,
-.stats__bottom button:active,
-.stats__bottom button:focus,
+.stats__bottom--button:hover,
+.stats__bottom--button:active,
+.stats__bottom--button:focus,
 .about__left--button:hover,
 .about__left--button:focus,
 .about__left--button:active {

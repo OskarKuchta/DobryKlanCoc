@@ -67,15 +67,29 @@ const StatsTable: React.FC<StatsTable> = ({ url }) => {
                 onClick={filterCurrent}
                 ref={statsButton}
                 className="stats__bottom--button"
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") {
+                    if (filterLoop === 3) {
+                      setfilterLoop(0);
+                    } else {
+                      e.preventDefault();
+                      setfilterLoop((prev) => (prev + 1) % 4);
+                    }
+                  }
+                }}
               >
                 {filterList[filterLoop + 1 <= 3 ? filterLoop + 1 : 0]}
               </button>
             </div>
             <div className="stats__bottom--right">
-              <i
-                className={`fa-solid fa-angle-${arrow} stats__bottom--arrow`}
+              <button
+                className="stats__bottom--button-arrow"
                 onClick={hideTable}
-              ></i>
+              >
+                <i
+                  className={`fa-solid fa-angle-${arrow} stats__bottom--arrow`}
+                ></i>
+              </button>
             </div>
           </div>
           {isTableVisible && (
