@@ -16,10 +16,15 @@ router.get("/clans/main", async (req, res) => {
         const headers = {
             Accept: "application/json",
             Authorization: `Bearer ${token}`,
+            'Cache-Control': 'no-store',
+            'Expires': new Date(0).toUTCString(),
+            'Pragma': 'no-cache',
         };
-        res.header("Access-Control-Allow-Origin", "*");
-        res.header("Cache-Control", "public, max-age=30");
-
+        res.set({
+            'Cache-Control': 'no-store',
+            'Expires': new Date(0).toUTCString(),
+            'Pragma': 'no-cache',
+        });
         const response = await axios.get(url, { headers });
         res.json(response.data);
     } catch (error) {
@@ -36,10 +41,15 @@ router.get("/clans/ak", async (req, res) => {
         const headers = {
             Accept: "application/json",
             Authorization: `Bearer ${token}`,
+            'Cache-Control': 'no-store',
+            'Expires': new Date(0).toUTCString(),
+            'Pragma': 'no-cache',
         };
-        res.header("Access-Control-Allow-Origin", "*");
-        res.header("Cache-Control", "public, max-age=30");
-
+        res.set({
+            'Cache-Control': 'no-store',
+            'Expires': new Date(0).toUTCString(),
+            'Pragma': 'no-cache',
+        });
         const response = await axios.get(url, { headers });
         res.json(response.data);
     } catch (error) {
