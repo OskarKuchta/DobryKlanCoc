@@ -26,9 +26,9 @@ const App: React.FC = () => {
   const [main, setMain] = useState<boolean>(true);
   const [ak, setAk] = useState<boolean>(false);
   const urlMain: string =
-    "https://dobry-klan.netlify.app/.netlify/functions/server/clans/main";
+    "https://dobry-klan.netlify.app/.netlify/functions/server/clan/main";
   const urlAk: string =
-    "https://dobry-klan.netlify.app/.netlify/functions/server/clans/ak"; // linki do serwera
+    "https://dobry-klan.netlify.app/.netlify/functions/server/clan/ak"; // linki do serwera
 
   // const urlMain: string = "api/v1/clans/%23Y09R909";
   // const urlAk: string = "api/v1/clans/%232qupvlcgc"; // linki proxy
