@@ -17,13 +17,12 @@
 .stats__bottom--arrow,
 .stats__bottom--button-arrow {
   color: var(--white);
-  transition: color 0.3s ease-in-out, scale 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 .stats__bottom--arrow:hover,
-.stats__bottom--button-arrow:focus {
-  cursor: pointer;
+.stats__bottom--button-arrow:focus .stats__bottom--arrow {
   color: rgb(76, 0, 255);
-  scale: 125%;
+  transform: scale(1.45);
 }
 .stats__bottom--button-arrow {
   background-color: transparent;
@@ -49,6 +48,9 @@
   }
 }
 @media screen and (max-width: 768px) {
+  .stats__members {
+    font-size: 0.8rem;
+  }
   .stats__top {
     justify-content: center;
     margin: 0;
