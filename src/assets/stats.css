@@ -16,13 +16,14 @@
 }
 .stats__bottom--arrow,
 .stats__bottom--button-arrow {
+  color: var(--white);
   transition: color 0.3s ease-in-out, scale 0.3s ease-in-out;
 }
 .stats__bottom--arrow:hover,
 .stats__bottom--button-arrow:focus {
   cursor: pointer;
   color: rgb(76, 0, 255);
-  scale: 155%;
+  scale: 125%;
 }
 .stats__bottom--button-arrow {
   background-color: transparent;

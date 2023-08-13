@@ -57,7 +57,9 @@ const AboutAk: React.FC<AboutAkProps> = ({ url, onClick }) => {
             </p>
           </div>
         </div>
-        {showTooltip && <Tooltip id="tooltip-main" place="bottom" delayShow={100}/>}
+        {showTooltip && (
+          <Tooltip id="tooltip-ak" place="bottom" delayShow={100} />
+        )}
       </section>
     );
   } else {
