@@ -7,7 +7,7 @@
 ## Technology Stack
 
 <img src="https://img.shields.io/badge/React-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" />
-<img src="https://img.shields.io/badge/BEM-%2320232a.svg?style=for-the-badge&logo=bem&logoColor=%000000" />
+<img src="https://img.shields.io/badge/BEM-%2320232a.svg?style=for-the-badge" />
 <img src="https://img.shields.io/badge/Node.js-%2320232a.svg?style=for-the-badge&logo=node.js&logoColor=%339933" />
 <img src="https://img.shields.io/badge/TypeScript-%2320232a.svg?style=for-the-badge&logo=typescript&logoColor=%3178C6" />
 <img  src="https://img.shields.io/badge/Express.js-%2320232a.svg?style=for-the-badge&logo=express&logoColor=%white"/>
@@ -21,13 +21,17 @@ two different endpoints to fetch data from Clash Of Clans API.
 
 ## Some result photos
 
-#1 Main content
+#1 About clan content
 <img src="./public/result1.png" />
 <br /> <br />
 #2 Navigation menu
 <img src="./public/result2.png" />
 <br /> <br />
-<img src="" />
-<img src="" />
-<img src="" />
-<img src="" />
+#3 Stats top section
+<img src="./public/result3.png" />
+<br /> <br />
+#4 Different stats to filter players
+<img src="./public/result4.png" />
+<br /> <br />
+#5 Hidden table with stats + contact section
+<img src="./public/result5.png" />
