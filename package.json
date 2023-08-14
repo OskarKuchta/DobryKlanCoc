@@ -4,12 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "node server.js",
-    "build-functions": "npx netlify-lambda build netlify/functions",
+    "start": "cd functions & node server.js",
     "dev": "vite --open --host",
     "build": "tsc && vite build",
-    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
     "netlify dev": "netlify dev"
   },
   "dependencies": {
