@@ -12,7 +12,7 @@ router.use(cors({
 router.get("/clan/main", async (req, res) => {
     try {
         const url = 'https://cocproxy.royaleapi.dev/v1/clans/%23Y09R909';
-        const token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjI5OThlOWMzLTFlOTgtNDBiYS1iODFlLTcxZTk0NjhkM2FhMiIsImlhdCI6MTY5MTI1MTQ2MCwic3ViIjoiZGV2ZWxvcGVyLzczZGY3Yjk0LThkNzktZWM0YS1iMjE0LWRlN2NiZmE2OTkxNiIsInNjb3BlcyI6WyJjbGFzaCJdLCJsaW1pdHMiOlt7InRpZXIiOiJkZXZlbG9wZXIvc2lsdmVyIiwidHlwZSI6InRocm90dGxpbmcifSx7ImNpZHJzIjpbIjQ1Ljc5LjIxOC43OSJdLCJ0eXBlIjoiY2xpZW50In1dfQ.MfwLGOxHjlO1qy8N1Hh6LeX9bhAqcY0n_cNrY26Nctlg3R3GSIQOzkuwy6ngqGZnhCvEKOnFFnx6TuFOyfWNAw";
+        const token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjFkZGZkNmM4LTA4YWUtNDc0OS05OWI3LTFiZDc1ZDgxYWY4NCIsImlhdCI6MTY5NTg4ODM0Mywic3ViIjoiZGV2ZWxvcGVyLzczZGY3Yjk0LThkNzktZWM0YS1iMjE0LWRlN2NiZmE2OTkxNiIsInNjb3BlcyI6WyJjbGFzaCJdLCJsaW1pdHMiOlt7InRpZXIiOiJkZXZlbG9wZXIvc2lsdmVyIiwidHlwZSI6InRocm90dGxpbmcifSx7ImNpZHJzIjpbIjQ1Ljc5LjIxOC43OSJdLCJ0eXBlIjoiY2xpZW50In1dfQ.18SHpFfhQlVE8wQpgvkp9E0d8oVpDbQ5TP4vjLnBWeAyovwAe74MJLy7eqzrWE1AZFhQj-uuaoz90opiTRaRgQ";
         const headers = {
             Accept: "application/json",
             Authorization: `Bearer ${token}`,
@@ -37,7 +37,7 @@ router.get("/clan/main", async (req, res) => {
 router.get("/clan/ak", async (req, res) => {
     try {
         const url = 'https://cocproxy.royaleapi.dev/v1/clans/%232qupvlcgc';
-        const token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjI5OThlOWMzLTFlOTgtNDBiYS1iODFlLTcxZTk0NjhkM2FhMiIsImlhdCI6MTY5MTI1MTQ2MCwic3ViIjoiZGV2ZWxvcGVyLzczZGY3Yjk0LThkNzktZWM0YS1iMjE0LWRlN2NiZmE2OTkxNiIsInNjb3BlcyI6WyJjbGFzaCJdLCJsaW1pdHMiOlt7InRpZXIiOiJkZXZlbG9wZXIvc2lsdmVyIiwidHlwZSI6InRocm90dGxpbmcifSx7ImNpZHJzIjpbIjQ1Ljc5LjIxOC43OSJdLCJ0eXBlIjoiY2xpZW50In1dfQ.MfwLGOxHjlO1qy8N1Hh6LeX9bhAqcY0n_cNrY26Nctlg3R3GSIQOzkuwy6ngqGZnhCvEKOnFFnx6TuFOyfWNAw";
+        const token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjFkZGZkNmM4LTA4YWUtNDc0OS05OWI3LTFiZDc1ZDgxYWY4NCIsImlhdCI6MTY5NTg4ODM0Mywic3ViIjoiZGV2ZWxvcGVyLzczZGY3Yjk0LThkNzktZWM0YS1iMjE0LWRlN2NiZmE2OTkxNiIsInNjb3BlcyI6WyJjbGFzaCJdLCJsaW1pdHMiOlt7InRpZXIiOiJkZXZlbG9wZXIvc2lsdmVyIiwidHlwZSI6InRocm90dGxpbmcifSx7ImNpZHJzIjpbIjQ1Ljc5LjIxOC43OSJdLCJ0eXBlIjoiY2xpZW50In1dfQ.18SHpFfhQlVE8wQpgvkp9E0d8oVpDbQ5TP4vjLnBWeAyovwAe74MJLy7eqzrWE1AZFhQj-uuaoz90opiTRaRgQ";
         const headers = {
             Accept: "application/json",
             Authorization: `Bearer ${token}`,
