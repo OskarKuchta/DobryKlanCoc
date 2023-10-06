@@ -9,10 +9,11 @@ const Stats = lazy(() => import("./components/Stats"));
 const Contact = lazy(() => import("./components/Contact"));
 
 const App: React.FC = () => {
-  const { changeToMain, changeToAk, showContact, main, ak, urlMain, urlAk } =
+  const { changeToMain, changeToAk, showContact, main, urlMain, urlAk } =
     ToogleURL();
   return (
     <div className="bg-wrapper">
+      <Navbar />
       <Suspense
         fallback={
           <div className="loading">
@@ -30,31 +31,23 @@ const App: React.FC = () => {
           </div>
         }
       >
-        {main && (
-          <>
-            <Navbar />
-            <main>
-              <ErrorBoundary>
+        <main>
+          <ErrorBoundary>
+            {main ? (
+              <>
                 <AboutMain url={urlMain} onClick={changeToAk} />
                 <Stats url={urlMain} />
-              </ErrorBoundary>
-            </main>
-            {showContact && <Contact />}
-          </>
-        )}
-        {ak && (
-          <>
-            <Navbar />
-            <main>
-              <ErrorBoundary>
+              </>
+            ) : (
+              <>
                 <AboutAk url={urlAk} onClick={changeToMain} />
                 <Stats url={urlAk} />
-              </ErrorBoundary>
-            </main>
-            {showContact && <Contact />}
-          </>
-        )}
+              </>
+            )}
+          </ErrorBoundary>
+        </main>
       </Suspense>
+      {showContact && <Contact />}
     </div>
   );
 };
