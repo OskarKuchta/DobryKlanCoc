@@ -40,25 +40,25 @@ two different endpoints to fetch data from Clash Of Clans API.
 
 In the project directory, you can run:
 
-<span style="background-color: grey; padding: 5px; border-radius: 2px">npm start</span>
+<span style="background-color: grey; padding: 5px; border-radius: 2px">npm run start</span>
 <br /><br />
 The start script is designed to efficiently start your Node.js server located within the "functions" folder. It first navigates to the "functions" directory using the cd command, and then initiates the execution of the server.js file using the node command.
 
 This script is particularly useful when you need to run a server that resides in a subdirectory. It allows you to seamlessly change to the appropriate directory and launch the server with a single npm command.
 <br /><br />
-<span style="background-color: grey; padding: 5px; border-radius: 2px">npm dev</span>
+<span style="background-color: grey; padding: 5px; border-radius: 2px">npm run dev</span>
 <br /><br />
 The dev script is used to launch your development environment using Vite, a build tool that focuses on providing a fast and efficient development experience for web applications. This script starts a local development server, opens your default web browser, and hosts your application on the specified host.
 
 When you run the dev script, Vite will initiate the development server and provide features such as hot module replacement (HMR) and fast build times, making the development process smoother and more productive.
 <br /><br />
-<span style="background-color: grey; padding: 5px; border-radius: 2px">npm build</span>
+<span style="background-color: grey; padding: 5px; border-radius: 2px">npm run build</span>
 <br /><br />
 The build script is a multi-step process used to prepare your TypeScript-based web application for production deployment. It first compiles TypeScript files using the TypeScript compiler (tsc), ensuring your code is converted into JavaScript that can run in a browser. Then, it triggers the Vite build process to optimize and package your application's assets for production.
 
 By using this script, you streamline the process of converting your TypeScript source code into optimized and minified JavaScript files ready for deployment.
 <br /><br />
-<span style="background-color: grey; padding: 5px; border-radius: 2px">npm build</span>
+<span style="background-color: grey; padding: 5px; border-radius: 2px">npm run netlify</span>
 <br /><br />
 The netlify dev script is used to start a local development server provided by Netlify, a platform for deploying and managing web applications. This script is particularly useful for testing and previewing your web application in a local environment that simulates the features and functions of the production environment on the Netlify platform.
 
